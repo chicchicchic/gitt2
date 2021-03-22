@@ -21,7 +21,8 @@
         form.addEventListener('submit',(e)=>{
             e.preventDefault();
             if(username.value==="admin" && password.value==="admin"){
-                alert('Thành công');
+                // alert('Thành công');
+                window.location.replace('./success.html')
             }else{
                 alert('Thất bại');
             }

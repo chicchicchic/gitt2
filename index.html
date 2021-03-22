@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BT Git</title>
+</head>
+<body>
+    <form>
+        <label for="lblusername">Username</label>
+        <input type="text" name="txtusername" id="txtusername">
+        <label for="lblpassword">Password</label>
+        <input type="password" name="txtpassword" id="txtpassword">
+        <button type="submit">Xac nhan</button>
+    </form>
+    <script>
+        const username=document.getElementById('txtusername');
+        const password=document.getElementById('txtpassword');
+        const form=document.querySelector('form');
+        form.addEventListener('submit',(e)=>{
+            e.preventDefault();
+            if(username.value==="admin" && password.value==="admin"){
+                // alert('Thành công');
+                window.location.replace('./success.html')
+            }else{
+                alert('Thất bại');
+            }
+        })
+    </script>
+</body>
+</html>

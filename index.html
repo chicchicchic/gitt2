@@ -8,11 +8,24 @@
 </head>
 <body>
     <form>
-        <label for="lblusername"></label>
+        <label for="lblusername">Username</label>
         <input type="text" name="txtusername" id="txtusername">
-        <label for="lblpassword"></label>
-        <input type="text" name="txtusername" id="txtusername">
+        <label for="lblpassword">Password</label>
+        <input type="password" name="txtpassword" id="txtpassword">
         <button type="submit">Xac nhan</button>
     </form>
+    <script>
+        const username=document.getElementById('txtusername');
+        const password=document.getElementById('txtpassword');
+        const form=document.querySelector('form');
+        form.addEventListener('submit',(e)=>{
+            e.preventDefault();
+            if(username.value==="admin" && password.value==="admin"){
+                alert('Thành công');
+            }else{
+                alert('Thất bại');
+            }
+        })
+    </script>
 </body>
 </html>
